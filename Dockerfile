@@ -10,6 +10,11 @@ COPY mysite /mysite
 
 # Set environment variables 
 ENV PORT=8000 
+ENV STUDENT_NAME=puddintane
+ENV SITE_NAME='Ask Me Again'
+ENV SECRET_KEY=fixme-ansdfnasdfasd8fhu823uirnsdfkn
+ENV DEBUG=1
+ENV DATA_DIR=/data
 
 # Set the working directory
 WORKDIR /mysite 
