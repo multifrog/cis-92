@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import os 
 import psutil 
-from django.shortcuts import render 
 
 def site_index(request):
     """The default view for our page."""
@@ -17,6 +16,6 @@ def site_index(request):
 
 
 def index(request):
-    return HttpResponse("Jdog wuzzzz here")
+    return HttpResponse("Joe B was here")
 
     

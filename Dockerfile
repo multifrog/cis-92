@@ -16,8 +16,8 @@ ENV PORT=8000
 ENV STUDENT_NAME="Joe Bonanno"
 ENV SITE_NAME="Really Cool Site"
 ENV SECRET_KEY="defaultsecret"
-ENV DEBUG="1"
-ENV DATA_DIR="/data"
+ENV DEBUG=1
+ENV DATA_DIR=/data
 
 # Set the working directory
 WORKDIR /mysite 
