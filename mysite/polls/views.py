@@ -16,6 +16,6 @@ def site_index(request):
 
 
 def index(request):
-    return HttpResponse("Jdog wuzzzz here")
+    return HttpResponse("Joe was here")
 
     
