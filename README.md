@@ -12,12 +12,12 @@ By Joe Bonanno
 | ENV DATA_DIR=| "/data" | "/data" | 
 | WORKDIR  | /mysite | /mysite | 
 
-**Startup commands**
-gcloud config set project cis-92-xxxxx
-kubectl apply -f deployment/
-kubectl exec --stdin --tty  pod/mysite-pod -- /bin/bash 
-python manage.py migrate
-python manage.py createsuperuser
+**Startup commands**  
+gcloud config set project cis-92-xxxxx  
+kubectl apply -f deployment/  
+kubectl exec --stdin --tty  pod/mysite-pod -- /bin/bash  
+python manage.py migrate  
+python manage.py createsuperuser  
 
 **Turn Down**
-kubectl delete -f deployment/
+kubectl delete -f deployment/  
