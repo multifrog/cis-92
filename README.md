@@ -13,11 +13,7 @@ By Joe Bonanno
 | WORKDIR  | /mysite | /mysite | 
 
 **Startup commands**  
-gcloud config set project cis-92-xxxxx  
-kubectl apply -f deployment/  
-kubectl exec --stdin --tty  pod/mysite-pod -- /bin/bash  
-python manage.py migrate  
-python manage.py createsuperuser  
+kubectl apply -f deployment/pod.yaml  
 
-**Turn Down**
-kubectl delete -f deployment/  
+**Turn Down**  
+kubectl delete -f deployment/pod.yaml
