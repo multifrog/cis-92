@@ -40,3 +40,10 @@ spec:
         volumeMounts:
         - name: db
           mountPath: /data
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+            httpHeaders:
+            - name: host
+              value: localhost

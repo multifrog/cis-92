@@ -37,8 +37,10 @@ By Joe Bonanno
 
 **Startup commands**  
 helm install postgres oci://registry-1.docker.io/bitnamicharts/postgresql --values values-postgres.yaml  
-kubectl apply -f deployment/pod.yaml  
+kubectl apply -f deployment/deployment.yaml
+kubectl apply -f deployment/service.yaml
 
 **Turn Down**  
-kubectl delete -f deployment/pod.yaml  
+kubectl delete -f deployment/deployment.yaml
+kubectl delete -f deployment/service.yaml
 helm uninstall postgres
