@@ -5,7 +5,7 @@ metadata:
 data:
     PORT: "8000" 
     STUDENT_NAME: "Joe M Bonanno"
-    SITE_NAME: "*"
+    SITE_NAME: "Joe's cool site"
     DEBUG: "1"
     POSTGRES_DB: "mysite"
     POSTGRES_HOSTNAME: "postgres-postgresql"  
