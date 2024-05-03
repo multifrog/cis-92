@@ -3,6 +3,19 @@
 This repository has the starter code for CIS-92. 
 By Joe Bonanno
 
+**Startup commands**  
+helm install postgres oci://registry-1.docker.io/bitnamicharts/postgresql --values values-postgres.yaml  
+kubectl apply -f deployment/
+
+kubectl exec --stdin --tty deployment/mysite-deployment -- python manage.py migrate 
+kubectl exec --stdin --tty deployment/mysite-deployment -- python manage.py createsuperuser
+
+**Turn Down**  
+kubectl delete -f deployment
+helm uninstall postgres
+
+
+
 | Key | Use | Default |
 | --- | --- | --- | 
 | ENV PORT= | 8000 | 8000 | 
@@ -34,14 +47,3 @@ By Joe Bonanno
 |      cpu: "500m" |
 |      ephemeral-storage: "100Mi" |
 
-
-**Startup commands**  
-helm install postgres oci://registry-1.docker.io/bitnamicharts/postgresql --values values-postgres.yaml  
-kubectl apply -f deployment/
-kubectl exec --stdin --tty  deployment/mysite-deployment -- /bin/bash
-python manage.py migrate
-python manage.py createsuperuser
-
-**Turn Down**  
-kubectl delete -f deployment
-helm uninstall postgres
