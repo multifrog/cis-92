@@ -3,8 +3,7 @@
 This repository has the starter code for CIS-92. 
 By Joe Bonanno  
   
-**Startup commands**  
-minikube start  
+**Startup commands** 
 helm install postgres oci://registry-1.docker.io/bitnamicharts/postgresql --values values-postgres.yaml  
 kubectl apply -f deployment/  
   
@@ -14,7 +13,7 @@ kubectl exec --stdin --tty deployment/mysite-deployment -- python manage.py crea
 kubectl port-forward svc/mysite-svc 8000:80  
   
 **Turn Down**  
-kubectl delete -f deployment  
+kubectl delete -f deployment/
 helm uninstall postgres  
   
 
